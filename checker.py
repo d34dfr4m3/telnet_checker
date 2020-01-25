@@ -20,6 +20,7 @@ for line in info:
     password=line.split(':')[2].replace('\n','')
   except Exception as err: 
     print("[!] Error: %s" %(err))
+    continue
   if check_port(HOST) == 0:
     string="[!] Hostname: %s is UP." %(HOST)
     print("\t[-] Testing Username:%s Password:%s" %(user,password))
